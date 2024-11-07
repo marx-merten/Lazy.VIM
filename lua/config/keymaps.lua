@@ -12,8 +12,8 @@ map("n", "<leader>ghP", "<cmd>Gitsigns preview_hunk<cr>", { desc = "Preview Hunk
 -- colemak related navigation Overrides
 -- using cursor keys on navlayer
 map("n", "<C-Left>", "<C-w>h", { desc = "Go to Left Window", remap = true })
-map("n", "<C-Up>", "<C-w>j", { desc = "Go to Lower Window", remap = true })
-map("n", "<C-Down>", "<C-w>k", { desc = "Go to Upper Window", remap = true })
+map("n", "<C-Down>", "<C-w>j", { desc = "Go to Lower Window", remap = true })
+map("n", "<C-Up>", "<C-w>k", { desc = "Go to Upper Window", remap = true })
 map("n", "<C-Right>", "<C-w>l", { desc = "Go to Right Window", remap = true })
 
 map("n", "<S-Left>", "<cmd>bprevious<cr>", { desc = "Prev Buffer", remap = true })
