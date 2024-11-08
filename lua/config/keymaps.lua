@@ -11,10 +11,17 @@ vim.keymap.set("n", "<leader>U", "<cmd>Telescope undo<cr>")
 map("n", "<leader>ghP", "<cmd>Gitsigns preview_hunk<cr>", { desc = "Preview Hunk" })
 -- colemak related navigation Overrides
 -- using cursor keys on navlayer
-map("n", "<C-Left>", "<C-w>h", { desc = "Go to Left Window", remap = true })
-map("n", "<C-Down>", "<C-w>j", { desc = "Go to Lower Window", remap = true })
-map("n", "<C-Up>", "<C-w>k", { desc = "Go to Upper Window", remap = true })
-map("n", "<C-Right>", "<C-w>l", { desc = "Go to Right Window", remap = true })
+map("n", "<C-Left>", "<cmd>NvimTmuxNavigateLeft<cr>", { desc = "Go to Left Window", remap = true })
+map("n", "<C-Down>", "<cmd>NvimTmuxNavigateDown<cr>", { desc = "Go to Lower Window", remap = true })
+map("n", "<C-Up>", "<cmd>NvimTmuxNavigateUp<cr>", { desc = "Go to Upper Window", remap = true })
+map("n", "<C-Right>", "<cmd>NvimTmuxNavigateRight<cr>", { desc = "Go to Right Window", remap = true })
+
+map("n", "<C-h>", "<cmd>NvimTmuxNavigateLeft<cr>", {})
+map("n", "<C-j>", "<cmd>NvimTmuxNavigateDown<cr>", {})
+map("n", "<C-k>", "<cmd>NvimTmuxNavigateUp<cr>", {})
+map("n", "<C-l>", "<cmd>NvimTmuxNavigateRight<cr>", {})
+map("n", "<C-\\>", "<cmd>NvimTmuxNavigateLastActive<cr>", {})
+map("n", "<C-Space>", "<cmd>NvimTmuxNavigateNext<cr>", {})
 
 map("n", "<S-Left>", "<cmd>bprevious<cr>", { desc = "Prev Buffer", remap = true })
 map("n", "<S-Right>", "<cmd>bnext<cr>", { desc = "Next Buffer" })
