@@ -33,13 +33,17 @@ map("v", "<A-Down>", ":<C-u>execute \"'<,'>move '>+\" . v:count1<cr>gv=gv", { de
 map("v", "<A-Up>", ":<C-u>execute \"'<,'>move '<-\" . (v:count1 + 1)<cr>gv=gv", { desc = "Move Up" })
 
 -- Autocompletion
--- TODO: Make this a toggle
-map(
-  "n",
-  "<leader>ua",
-  '<cmd> lua require("cmp").setup.buffer({ enabled = false })<CR>',
-  { desc = "Toggle Autocompletion" }
-)
 
+Snacks.toggle
+  .new({
+    name = "Cmp autocomplete", -- Name for the toggle
+    get = function()
+      return vim.g.cmp_enabled
+    end,
+    set = function(value)
+      vim.g.cmp_enabled = value
+    end,
+  })
+  :map("<leader>ua")
 --
 -- Overrides
