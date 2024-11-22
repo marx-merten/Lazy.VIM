@@ -47,3 +47,4 @@ Snacks.toggle
   :map("<leader>ua")
 --
 -- Overrides
+map("n", "<leader>fh", LazyVim.pick("find_files", { hidden = true }), { desc = "Find Files (Root Dir) include hidden" })
