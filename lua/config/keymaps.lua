@@ -45,6 +45,26 @@ Snacks.toggle
     end,
   })
   :map("<leader>ua")
+
+-- Twighlight
+vim.g.twighlight_enable = false
+Snacks.toggle
+  .new({
+    name = "Twighlight", -- Name for the toggle
+    get = function()
+      return vim.g.twighlight_enable
+    end,
+    set = function(value)
+      if value then
+        require("twilight").enable()
+      else
+        require("twilight").disable()
+      end
+      vim.g.twighlight_enable = value
+    end,
+  })
+  :map("<leader>ut")
+
 --
 -- Overrides
 map("n", "<leader>fh", LazyVim.pick("find_files", { hidden = true }), { desc = "Find Files (Root Dir) include hidden" })
