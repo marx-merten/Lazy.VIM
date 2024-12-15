@@ -4,9 +4,9 @@
 local map = vim.keymap.set
 -- Basics
 -- Motion
-vim.keymap.set({ "n", "v" }, "<C-u>", "<C-u>zz", { desc = "Page up keep Cursor centered", remap = true })
-vim.keymap.set({ "n", "v" }, "<C-d>", "<C-d>zz", { desc = "Page down keep Cursor centered", remap = true })
-vim.keymap.set("n", "<leader>U", "<cmd>Telescope undo<cr>")
+-- vim.keymap.set({ "n", "v" }, "<C-u>", "<C-u>zz", { desc = "Page up keep Cursor centered", remap = true })
+-- vim.keymap.set({ "n", "v" }, "<C-d>", "<C-d>zz", { desc = "Page down keep Cursor centered", remap = true })
+-- vim.keymap.set("n", "<leader>U", "<cmd>Telescope undo<cr>")
 
 map("n", "<leader>ghP", "<cmd>Gitsigns preview_hunk<cr>", { desc = "Preview Hunk" })
 -- colemak related navigation Overrides
