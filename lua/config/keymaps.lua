@@ -69,3 +69,4 @@ Snacks.toggle
 --
 -- Overrides
 map("n", "<leader>fh", LazyVim.pick("find_files", { hidden = true }), { desc = "Find Files (Root Dir) include hidden" })
+map("n", "<leader>P", '"_dP', { desc = "Paste without yanking" })
