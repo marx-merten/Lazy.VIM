@@ -66,6 +66,11 @@ Snacks.toggle
   })
   :map("<leader>ut")
 
+-- Custom keys and commands
+-- likely will be extracted to its own plugins later if important enough
+--
+map("n", "<leader>cjf", ":%!jq .<CR>", { desc = "Format JSON with jq" })
+
 --
 -- Overrides
 map("n", "<leader>fh", LazyVim.pick("find_files", { hidden = true }), { desc = "Find Files (Root Dir) include hidden" })
