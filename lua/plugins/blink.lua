@@ -1,0 +1,20 @@
+return {}
+-- WIP
+-- TODO: make it work
+-- return {
+--   "saghen/blink.cmp",
+--   opts = {
+--     cmdline = {
+--       completion = {
+--         menu = {
+--           border = "rouded",
+--         },
+--         documentation = {
+--           window = {
+--             border = "rouded",
+--           },
+--         },
+--       },
+--     },
+--   },
+-- }

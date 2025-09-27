@@ -2,6 +2,7 @@ return {
   "folke/noice.nvim",
   opts = {
     presets = {
+      bottom_search = true, -- use a classic bottom cmdline for search
       command_palette = {
         views = {
           cmdline_popup = {
@@ -31,7 +32,7 @@ return {
               padding = { 0, 1 },
             },
             win_options = {
-              winhighlight = { Normal = "Normal", FloatBorder = "NoiceCmdlinePopupBorder" },
+              winhighlight = { Normal = "Normal", FloatBorder = "DiagnosticInfo" },
             },
           },
         },
