@@ -8,3 +8,4 @@ vim.g.root_spec = { "lsp", { ".nvimroot", ".nvimproject" }, { ".git", "lua" }, "
 -- use zsh for now, fish has a 1 sec lag sometimes
 -- which is annoying on vim.tmux.navigation
 vim.opt.shell = "zsh"
+vim.opt.clipboard = "unnamedplus"
