@@ -9,3 +9,13 @@ vim.api.nvim_create_autocmd("TextYankPost", {
     vim.fn.setreg("+", vim.fn.getreg('"'))
   end,
 })
+
+-- if vim.g.neovide then
+--   vim.api.nvim_create_autocmd("UIEnter", {
+--     once = true,
+--     callback = function()
+--       vim.o.guifont = "IosevkaTerm Nerd Font Mono:h15"
+--     end,
+--   })
+--   -- rest of your config stays as-is
+-- end

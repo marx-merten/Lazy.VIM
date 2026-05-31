@@ -1,6 +1,6 @@
 if vim.g.neovide then
   -- Font
-  vim.o.guifont = "IosevkaTerm Nerd Font Mono:h15"
+  vim.o.guifont = "IosevkaTerm Nerd Font Mono:h14"
 
   -- Scaling
   vim.g.neovide_scale_factor = 1.0
@@ -17,7 +17,7 @@ if vim.g.neovide then
   vim.g.neovide_padding_right = 6
 
   -- Transparency (macOS)
-  vim.g.neovide_transparency = 0.95
+  vim.g.neovide_opacity = 0.95
   vim.g.neovide_window_blurred = true
 
   -- Blur (macOS only)
@@ -35,3 +35,4 @@ if vim.g.neovide then
   vim.keymap.set("c", "<D-v>", "<C-R>+")
   vim.keymap.set("t", "<D-v>", '<C-\\><C-n>"+Pi')
 end
+return {}
