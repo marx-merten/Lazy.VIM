@@ -13,15 +13,15 @@ map("n", "<leader>ghP", "<cmd>Gitsigns preview_hunk<cr>", { desc = "Preview Hunk
 
 -- using cursor keys on navlayer
 if not vim.g.vscode then
-  map("n", "<C-Left>", "<cmd>NavigatorLeft<cr>", { desc = "Go to Left Window", remap = true })
-  map("n", "<C-Down>", "<cmd>NavigatorDown<cr>", { desc = "Go to Lower Window", remap = true })
-  map("n", "<C-Up>", "<cmd>NavigatorUp<cr>", { desc = "Go to Upper Window", remap = true })
-  map("n", "<C-Right>", "<cmd>NavigatorRight<cr>", { desc = "Go to Right Window", remap = true })
+  map({ "n", "i" }, "<C-Left>", "<cmd>NavigatorLeft<cr>", { desc = "Go to Left Window", remap = true })
+  map({ "n", "i" }, "<C-Down>", "<cmd>NavigatorDown<cr>", { desc = "Go to Lower Window", remap = true })
+  map({ "n", "i" }, "<C-Up>", "<cmd>NavigatorUp<cr>", { desc = "Go to Upper Window", remap = true })
+  map({ "n", "i" }, "<C-Right>", "<cmd>NavigatorRight<cr>", { desc = "Go to Right Window", remap = true })
 
-  map("n", "<C-h>", "<cmd>NavigatorLeft<cr>", {})
-  map("n", "<C-j>", "<cmd>NavigatorDown<cr>", {})
-  map("n", "<C-k>", "<cmd>NavigatorUp<cr>", {})
-  map("n", "<C-l>", "<cmd>NavigatorRight<cr>", {})
+  map({ "n", "i" }, "<C-h>", "<cmd>NavigatorLeft<cr>", {})
+  map({ "n", "i" }, "<C-j>", "<cmd>NavigatorDown<cr>", {})
+  map({ "n", "i" }, "<C-k>", "<cmd>NavigatorUp<cr>", {})
+  map({ "n", "i" }, "<C-l>", "<cmd>NavigatorRight<cr>", {})
   map("n", "<C-\\>", "<cmd>NavigatorPrevious<cr>", {})
   -- map("n", "<C-Space>", "<cmd>NvimTmuxNavigateNext<cr>", {})
 end
