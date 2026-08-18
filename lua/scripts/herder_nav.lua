@@ -33,7 +33,7 @@ local function nav(wincmd, dir)
 end
 
 local function mapH(lhs, wincmd, dir, desc)
-  vim.keymap.set("n", lhs, function()
+  vim.keymap.set({ "n", "i" }, lhs, function()
     nav(wincmd, dir)
   end, { silent = true, noremap = true, desc = desc })
 end
