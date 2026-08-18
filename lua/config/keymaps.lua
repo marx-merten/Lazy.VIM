@@ -12,18 +12,22 @@ map("n", "<leader>ghP", "<cmd>Gitsigns preview_hunk<cr>", { desc = "Preview Hunk
 -- colemak related navigation Overrides
 
 -- using cursor keys on navlayer
-if not vim.g.vscode then
-  map({ "n", "i" }, "<C-Left>", "<cmd>NavigatorLeft<cr>", { desc = "Go to Left Window", remap = true })
-  map({ "n", "i" }, "<C-Down>", "<cmd>NavigatorDown<cr>", { desc = "Go to Lower Window", remap = true })
-  map({ "n", "i" }, "<C-Up>", "<cmd>NavigatorUp<cr>", { desc = "Go to Upper Window", remap = true })
-  map({ "n", "i" }, "<C-Right>", "<cmd>NavigatorRight<cr>", { desc = "Go to Right Window", remap = true })
+if vim.env.HERDR_PANE_ID and vim.env.HERDR_PANE_ID then
+  dofile(vim.fn.expand("~/.config/nvim/lua/scripts/herder_nav.lua"))
+else
+  if not vim.g.vscode then
+    map({ "n", "i" }, "<C-Left>", "<cmd>NavigatorLeft<cr>", { desc = "Go to Left Window", remap = true })
+    map({ "n", "i" }, "<C-Down>", "<cmd>NavigatorDown<cr>", { desc = "Go to Lower Window", remap = true })
+    map({ "n", "i" }, "<C-Up>", "<cmd>NavigatorUp<cr>", { desc = "Go to Upper Window", remap = true })
+    map({ "n", "i" }, "<C-Right>", "<cmd>NavigatorRight<cr>", { desc = "Go to Right Window", remap = true })
 
-  map({ "n", "i" }, "<C-h>", "<cmd>NavigatorLeft<cr>", {})
-  map({ "n", "i" }, "<C-j>", "<cmd>NavigatorDown<cr>", {})
-  map({ "n", "i" }, "<C-k>", "<cmd>NavigatorUp<cr>", {})
-  map({ "n", "i" }, "<C-l>", "<cmd>NavigatorRight<cr>", {})
-  map("n", "<C-\\>", "<cmd>NavigatorPrevious<cr>", {})
-  -- map("n", "<C-Space>", "<cmd>NvimTmuxNavigateNext<cr>", {})
+    map({ "n", "i" }, "<C-h>", "<cmd>NavigatorLeft<cr>", {})
+    map({ "n", "i" }, "<C-j>", "<cmd>NavigatorDown<cr>", {})
+    map({ "n", "i" }, "<C-k>", "<cmd>NavigatorUp<cr>", {})
+    map({ "n", "i" }, "<C-l>", "<cmd>NavigatorRight<cr>", {})
+    map("n", "<C-\\>", "<cmd>NavigatorPrevious<cr>", {})
+    -- map("n", "<C-Space>", "<cmd>NvimTmuxNavigateNext<cr>", {})
+  end
 end
 map("n", "<S-Left>", "<cmd>bprevious<cr>", { desc = "Prev Buffer", remap = true })
 map("n", "<S-Right>", "<cmd>bnext<cr>", { desc = "Next Buffer" })
