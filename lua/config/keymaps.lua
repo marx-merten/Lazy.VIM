@@ -12,7 +12,8 @@ map("n", "<leader>ghP", "<cmd>Gitsigns preview_hunk<cr>", { desc = "Preview Hunk
 -- colemak related navigation Overrides
 
 -- using cursor keys on navlayer
-if vim.env.HERDR_PANE_ID and vim.env.HERDR_PANE_ID then
+if (vim.env.HERDR_PANE_ID and vim.env.HERDR_PANE_ID ~= "") or (vim.env.REX_BLOCK and vim.env.REX_BLOCK ~= "") then
+  -- inside a multiplexer pane (herdr or Rex): the navigation bridge
   dofile(vim.fn.expand("~/.config/nvim/lua/scripts/herder_nav.lua"))
 else
   if not vim.g.vscode then
